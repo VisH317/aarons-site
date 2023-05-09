@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import Landing from "~/components/landing";
 import Nav from "~/components/nav";
 
 const Home: NextPage = () => {
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
       </Head>
       <main className="flex min-h-screen flex-col items-center bg-white">
         <Nav/>
+        <Landing/>
       </main>
     </>
   );
