@@ -1,12 +1,18 @@
 import Image from 'next/image'
-
-
-const imgList: string[] = []
+import { useState, useEffect } from 'react'
 
 export default function Landing() {
 
+    const [images, setImages] = useState<string[]>([])
+
+    useEffect(() => {
+        const li = []
+        for(let i=0;i<15;i++) li.push(`image${i}.jpeg`)
+        setImages(li) 
+    }, [])
+
     const mapImages = () => {
-        return imgList.map(i => <Image src={i} alt="img"/>)
+        return images.map(i => <Image src={i} alt="img"/>)
     }
 
     return (
